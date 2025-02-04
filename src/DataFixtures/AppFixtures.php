@@ -27,7 +27,7 @@ class AppFixtures extends Fixture
         // Boucle pour ajouter chaque thème dans la base de données
         foreach ($themes as $theme) {
             $dynamicQcm = new Dynamicqcm();
-            $dynamicQcm->setTheme($theme); // Assurez-vous d'avoir un setter pour 'theme'
+            $dynamicQcm->setTheme($theme);
 
             $manager->persist($dynamicQcm);
         }
