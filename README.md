@@ -7,7 +7,7 @@ Capture vidéo de la démonstration du localhost : https://drive.google.com/file
 Sécurity bundle : Pour que ça fonctionne j'ai d'abord tapé http://127.0.0.1:8000/register
 Le message "L'utilisateur a bien été créé " a été affiché
 
-J'ai ensuite tapé : http://127.0.0.1:8000/register
+J'ai ensuite tapé : http://127.0.0.1:8000/login
 
 J'ai saisi les crendentials : 
 
