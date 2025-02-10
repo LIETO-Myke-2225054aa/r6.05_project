@@ -9,9 +9,23 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
+    #[Route('/', name: 'home')]
+    public function home(): Response
+    {
+        if ($this->getUser()) {
+            return $this->redirectToRoute('themes_index'); // Redirection si connecté
+        }
+
+        return $this->redirectToRoute('app_login'); // Sinon, aller à la page de login
+    }
+
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
+        if ($this->getUser()) {
+            return $this->redirectToRoute('themes_index'); // Redirection si déjà connecté
+        }
+
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
 
@@ -28,5 +42,15 @@ class SecurityController extends AbstractController
     public function logout(): void
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
+    }
+
+    #[Route(path: '/themes', name: 'themes_index')]
+    public function themes(): Response
+    {
+        if (!$this->getUser()) {
+            throw new AccessDeniedException('Vous devez être connecté pour accéder à cette page.');
+        }
+
+        return $this->render('themes/index.html.twig');
     }
 }
