@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des e-mails{% endblock %}
+
+{% block body %}
+
+    <h1>Exemples d'adresses e-mail</h1>
+
+    <ul>
+        {% for user in emails %}
+            <li>{{ user.email }}</li>
+        {% else %}
+            <li>Aucune adresse e-mail disponible.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
