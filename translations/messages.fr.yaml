@@ -1,0 +1,7 @@
+form:
+  register: "S'inscrire"
+  email: "Adresse e-mail"
+  password: "Mot de passe"
+  submit: "Créer un compte"
+  already_registered: "Déjà inscrit ?"
+  login: "Se connecter"

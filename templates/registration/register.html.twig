@@ -1,37 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}{{ 'form.register'|trans }}{% endblock %}
 
 {% block body %}
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card shadow-lg p-4">
-                    <h1 class="h3 mb-3 text-center text-primary">Créer un compte</h1>
+    <h1 class="h3 mb-3 font-weight-normal">{{ 'form.register'|trans }}</h1>
 
-                    {{ form_start(registrationForm, {'attr': {'class': 'needs-validation'}}) }}
-                    <div class="mb-3">
-                        {{ form_label(registrationForm.email, 'Adresse e-mail', {'label_attr': {'class': 'form-label'}}) }}
-                        {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control', 'placeholder': 'Votre e-mail'}}) }}
-                        {{ form_errors(registrationForm.email) }}
-                    </div>
-
-                    <div class="mb-3">
-                        {{ form_label(registrationForm.plainPassword, 'Mot de passe', {'label_attr': {'class': 'form-label'}}) }}
-                        {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control', 'placeholder': 'Votre mot de passe'}}) }}
-                        {{ form_errors(registrationForm.plainPassword) }}
-                    </div>
-
-                    <div class="d-grid">
-                        {{ form_widget(registrationForm.submit, {'attr': {'class': 'btn btn-primary btn-lg'}}) }}
-                    </div>
-                    {{ form_end(registrationForm) }}
-
-                    <p class="mt-3 text-center">
-                        Déjà inscrit ? <a href="{{ path('app_login') }}" class="text-decoration-none">Se connecter</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+    {{ form_start(registrationForm) }}
+    <div class="mb-3">
+        <label>{{ 'form.email'|trans }}</label>
+        {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
     </div>
+
+    <div class="mb-3">
+        <label>{{ 'form.password'|trans }}</label>
+        {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <button class="btn btn-primary">{{ 'form.submit'|trans }}</button>
+
+    {{ form_end(registrationForm) }}
+
+    <p class="mt-3">
+        {{ 'form.already_registered'|trans }} <a href="{{ path('app_login') }}">{{ 'form.login'|trans }}</a>
+    </p>
 {% endblock %}

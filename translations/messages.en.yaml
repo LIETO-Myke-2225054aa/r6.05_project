@@ -1,0 +1,7 @@
+form:
+  register: "Register"
+  email: "Email address"
+  password: "Password"
+  submit: "Sign up"
+  already_registered: "Already registered?"
+  login: "Log in"

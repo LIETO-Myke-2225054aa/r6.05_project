@@ -39,5 +39,14 @@
         <div class="container mt-4">
             {% block body %}{% endblock %}
         </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                🌍 {{ app.request.locale|upper }}
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ path('change_locale', {'_locale': 'fr'}) }}">🇫🇷 Français</a></li>
+                <li><a class="dropdown-item" href="{{ path('change_locale', {'_locale': 'en'}) }}">🇬🇧 English</a></li>
+            </ul>
+        </div>
     </body>
 </html>
