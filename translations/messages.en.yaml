@@ -5,3 +5,43 @@ form:
   submit: "Sign up"
   already_registered: "Already registered?"
   login: "Log in"
+
+home:
+  title: "Home"
+  welcome: "Welcome to our website!"
+  login: "Login"
+  logout: "Logout"
+  register: "Create an account"
+  email_list: "Email List"
+  no_emails: "No email addresses available."
+
+register:
+  title: "Sign Up"
+  create_account: "Create an account"
+  email: "Email Address"
+  password: "Password"
+  submit: "Sign Up"
+  already_registered: "Already registered ?"
+  login_here: "Login here"
+
+login:
+  title: "Login"
+  username: "Username"
+  password: "Password"
+  remember_me: "Remember me"
+  submit: "Log in"
+  no_account: "No account yet ?"
+  register_here: "Sign up here"
+  login: "Please Sign In"
+
+
+emails:
+  title: "Email List"
+  list: "Examples of email addresses"
+  no_emails: "No email addresses available."
+
+navbar:
+  home: "Home"
+  logged_in_as: "Logged in as %username%"
+  logout: "Logout"
+  login: "Login"

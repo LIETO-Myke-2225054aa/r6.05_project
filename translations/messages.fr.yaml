@@ -5,3 +5,42 @@ form:
   submit: "Créer un compte"
   already_registered: "Déjà inscrit ?"
   login: "Se connecter"
+
+home:
+  title: "Accueil"
+  welcome: "Bienvenue sur notre site !"
+  login: "Connexion"
+  logout: "Déconnexion"
+  register: "Créer un compte"
+  email_list: "Liste des e-mails"
+  no_emails: "Aucune adresse e-mail disponible."
+
+register:
+  title: "Inscription"
+  create_account: "Créer un compte"
+  email: "Adresse e-mail"
+  password: "Mot de passe"
+  submit: "S'inscrire"
+  already_registered: "Déjà inscrit ?"
+  login_here: "Se connecter ici"
+
+login:
+  title: "Connexion"
+  username: "Nom d'utilisateur"
+  password: "Mot de passe"
+  remember_me: "Se souvenir de moi"
+  submit: "Se connecter"
+  no_account: "Pas encore de compte ?"
+  register_here: "Créer un compte ici"
+  login: "Se connecter"
+
+emails:
+  title: "Liste des e-mails"
+  list: "Exemples d'adresses e-mail"
+  no_emails: "Aucune adresse e-mail disponible."
+
+navbar:
+  home: "Accueil"
+  logged_in_as: "Connecté en tant que %username%"
+  logout: "Déconnexion"
+  login: "Connexion"
